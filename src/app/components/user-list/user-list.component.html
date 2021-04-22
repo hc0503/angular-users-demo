@@ -1,0 +1,17 @@
+<a routerLink="add" class="btn btn-primary mt-5">Add</a>
+<table class ="table mt-3">
+	<tr *ngFor="let user of users">
+		<td>
+			{{ user.name }}
+		</td>
+		<td>
+			{{ user.surname }}
+		</td>
+		<td>
+			{{ user.age }}
+		</td>
+		<td>  
+			<a routerLink="{{ user.id }}" class= 'btn btn-primary btn-sm'>Edit</a>
+		</td>
+	</tr>
+ </table>
