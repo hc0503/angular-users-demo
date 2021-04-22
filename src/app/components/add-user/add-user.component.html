@@ -1,0 +1,47 @@
+<div class="mt-5">
+	<a routerLink="/users" class="btn btn-primary">User list</a>
+	<div class="submit-form mt-3">
+	  <div *ngIf="!submitted">
+		 <div class="form-group">
+			<label for="name">Name</label>
+			<input
+			  type="text"
+			  class="form-control"
+			  id="name"
+			  required
+			  [(ngModel)]="user.name"
+			  name="name"
+			/>
+		 </div>
+ 
+		 <div class="form-group">
+			<label for="surname">Surname</label>
+			<input
+			  class="form-control"
+			  id="surname"
+			  required
+			  [(ngModel)]="user.surname"
+			  name="surname"
+			/>
+		 </div>
+
+		<div class="form-group">
+			<label for="age">Age</label>
+			<input
+			  class="form-control"
+			  id="age"
+			  required
+			  [(ngModel)]="user.age"
+			  name="age"
+			  type="number"
+			/>
+		 </div>
+ 
+		 <button (click)="saveUser()" class="btn btn-danger">Save user</button>
+	  </div>
+ 
+	  <div *ngIf="submitted">
+		 <h4>You submitted successfully!</h4>
+	  </div>
+	</div>
+ </div>
