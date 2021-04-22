@@ -8,6 +8,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserListComponent implements OnInit {
   users: any;
+  displayedColumns: string[] = ['name', 'surname', 'age', 'action'];
 
   constructor(private userService: UserService) { }
 

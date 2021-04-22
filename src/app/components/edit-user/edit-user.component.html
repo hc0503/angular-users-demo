@@ -1,5 +1,5 @@
 <div class="mt-5">
-	<a routerLink="/users" class="btn btn-primary">User list</a>
+	<button mat-raised-button color="primary" routerLink="/users">User list</button>
 	<div class="submit-form mt-3">
 	  <div *ngIf="!submitted">
 		 <div class="form-group">
@@ -37,7 +37,7 @@
 			/>
 		 </div>
  
-		 <button (click)="updateUser()" class="btn btn-danger">Update user</button>
+		<button mat-raised-button color="warn" (click)="updateUser()">Update user</button>
 	  </div>
  
 	  <div *ngIf="submitted">
